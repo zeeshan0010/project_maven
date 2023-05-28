@@ -6,6 +6,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -20,7 +21,10 @@ public class DriverLifeCycleSetting {
 	{
 		switch(browser) {
 			case CHROME:
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("--headless");
 				WebDriverManager.chromedriver().setup();
+				
 				return new ChromeDriver();
 			case FIREFOX:
 				WebDriverManager.firefoxdriver().setup();;
