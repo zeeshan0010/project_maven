@@ -44,12 +44,7 @@
   		<version>4.9.1</version>
   		<scope>test</scope>
   	</dependency>
-	   <dependency>
-  		<groupId>org.seleniumhq.webdriver</groupId>
-  		<artifactId>webdriver-chrome</artifactId>
-  		<version>0.9.7376</version>
-  		<scope>test</scope>
-  	</dependency>
+	   
   </dependencies>
   <build>
 	  <plugins>
