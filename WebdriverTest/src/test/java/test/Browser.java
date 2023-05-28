@@ -1,5 +1,5 @@
 package test;
 
 public enum Browser {
-CHROME
+CHROME, FIREFOX1,EDGE1
 }
