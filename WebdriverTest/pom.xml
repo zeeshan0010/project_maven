@@ -78,6 +78,13 @@
             <artifactId>selenium-java</artifactId>
             <version>${selenium.version}</version>
         </dependency>
+	    
+	    <dependency>
+  		<groupId>org.seleniumhq.webdriver</groupId>
+  		<artifactId>webdriver-chrome</artifactId>
+  		<version>0.9.7376</version>
+  		<scope>test</scope>
+  	</dependency>
 	    <dependency>
   		<groupId>io.github.bonigarcia</groupId>
   		<artifactId>webdrivermanager</artifactId>
