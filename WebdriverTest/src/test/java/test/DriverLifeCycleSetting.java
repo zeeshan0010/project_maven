@@ -22,6 +22,8 @@ public class DriverLifeCycleSetting {
 		switch(browser) {
 			case CHROME:
 				ChromeOptions options = new ChromeOptions();
+				options.addArguments("--no-sandbox");
+				options.addArguments("--disable-dev-shm-usage");
 				options.addArguments("--headless");
 				WebDriverManager.chromedriver().setup();
 				
