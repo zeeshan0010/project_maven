@@ -15,10 +15,11 @@ import test.Browser;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverLifeCycleSetting {
-	public static WebDriver driver;
+	
 	 
 	public static WebDriver  getNewDriverInstance(Browser browser)
 	{
+		protected stactic WebDriver driver;
 		switch(browser) {
 			case CHROME:
 				ChromeOptions options = new ChromeOptions();
