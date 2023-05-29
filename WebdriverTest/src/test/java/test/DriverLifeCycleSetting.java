@@ -25,8 +25,8 @@ public class DriverLifeCycleSetting {
 				ChromeOptions options = new ChromeOptions();
 				options.addArguments("--headless");
 				driver = new ChromeDriver(options);
-				return driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-				
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+				return driver;
 				
 			case FIREFOX:
 				WebDriverManager.firefoxdriver().setup();;
