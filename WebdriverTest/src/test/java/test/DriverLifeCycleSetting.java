@@ -10,6 +10,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.edge.EdgeOptions;
 
 import test.Browser;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -30,11 +32,18 @@ public class DriverLifeCycleSetting {
 				
 				
 			case FIREFOX:
-				WebDriverManager.firefoxdriver().setup();;
-				return new FirefoxDriver();
+				WebDriverManager.firefoxdriver().setup();
+				FirefoxOptions options = new FirefoxOptions();
+				options.addArguments("--headless");
+				
+				return new FirefoxDriver(options);
 			case EDGE:
 				WebDriverManager.edgedriver().setup();
-				return new EdgeDriver();
+				EdgeOptions options = new EdgeOptions();
+				options.addArguments("--headless");
+				
+				
+				return new EdgeDriver(options);
 			default:
 				throw new IllegalArgumentException();
 		}
