@@ -15,7 +15,7 @@ import test.Browser;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverLifeCycleSetting {
-
+	protected WebDriver driver;
 	 
 	public static WebDriver  getNewDriverInstance(Browser browser)
 	{
