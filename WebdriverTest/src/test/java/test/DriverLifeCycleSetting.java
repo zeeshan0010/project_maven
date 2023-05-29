@@ -34,13 +34,13 @@ public class DriverLifeCycleSetting {
 			case FIREFOX:
 				WebDriverManager.firefoxdriver().setup();
 				FirefoxOptions options1 = new FirefoxOptions();
-				options.addArguments("--headless");
+				options1.addArguments("--headless");
 				
 				return new FirefoxDriver(options1);
 			case EDGE:
 				WebDriverManager.edgedriver().setup();
 				EdgeOptions options2 = new EdgeOptions();
-				options.addArguments("--headless");
+				options2.addArguments("--headless");
 				
 				
 				return new EdgeDriver(options2);
